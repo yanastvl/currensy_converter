@@ -58,7 +58,6 @@ import FlagsMap from '../flags.js';
     export default {
         data() {
             return {
-                // selected: this.selectedCountry,
                 locale: "ru"
             };
         },
