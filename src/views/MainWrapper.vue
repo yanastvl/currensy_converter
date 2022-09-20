@@ -5,7 +5,7 @@
         <div class="wrapper__inner">
             <div class="wrapper__column--first">
                 <p class="wrapper__text">Enter the Amount</p>
-                <input class="wrapper__input" type="number" autocomplete="off" v-model="amount" @input="setAmount">
+                <input :class="`wrapper__input ${!amount ? 'wrapper__input-empty' : ''}`" type="number" autocomplete="off" v-model="amount" @input="setAmount">
             </div>
             <div class="wrapper__column--second">
 
@@ -93,13 +93,21 @@
         align-items: center;
         justify-content: space-between;
 
-        border: 2px solid #dbe1e6;
+        border: 2px solid black;
         border-radius: 5px;
         outline: none;
         padding: 5px 10px;
 
         height: 50px;
         width: 100%;
+
+        &:hover,&:active{
+                border: 2px solid black;
+        }
+
+        &-empty{
+            border: 2px solid #dbe1e6;
+        }
     }
 
     &__select{
@@ -127,7 +135,6 @@
         cursor:pointer;
     }
     }
-
 
 </style>
 
